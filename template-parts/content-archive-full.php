@@ -16,7 +16,7 @@ $categories = get_the_category();
 <article class="archive__item">
   <div class="item__thumb mb-3">
     <a href="<?php the_permalink(); ?>" class="dnfix__thumb">
-      <?php the_post_thumbnail('medium', array('class' => 'img-fluid', 'alt'   => get_the_title())); ?>
+      <?php the_post_thumbnail('large', array('class' => 'img-fluid', 'alt'   => get_the_title())); ?>
     </a>
   </div><!-- .post-thumbnail -->
   <h3 class="entry-title item__title">
