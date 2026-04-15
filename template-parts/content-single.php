@@ -7,9 +7,12 @@
  * @subpackage Dntheme
  * @version 1.0
  */
-$categories = get_the_category(get_the_ID());
-$cat_name = $categories[0]->name;
-$cat_link = get_category_link($categories[0]);
+$categories = get_the_category();
+if (! empty($categories)) {
+    $cat      = $categories[0];
+    $cat_name = $cat->name;
+    $cat_link = get_category_link($cat->term_id);
+}
 ?>
 <div class="single__wrap">
   <div class="page__header mb-3">
